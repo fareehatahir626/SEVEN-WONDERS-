@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seven Wonders of the World</title>
+    <!-- Include Orbitron font -->
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="bootstrap css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png" alt="Logo" class="logo">
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="feedback.html">Feedback</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sitemap.html">Sitemap</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="feedback">
+            <section id="faqs"></section>
+    <div class="sss" style="background-color:#9898991f ;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 mt-4">
+                    <h4 class="fs-1 mb-4 theme-text-secondary fw-bold text-center" style="color: black"
+                        font-family: 'Orbitron' , sans-serif;>Frequently Asked<span class="theme-text-primary"
+                            style="color: #2D9596;"> Question
+                </div>
+            </div>
+            <div class="row">
+                <!-- Feedback Section -->
+                <div class="col-sm-6">
+                    <div class="chk">
+                        <div class="wrapper" style="margin-top: 30px;">
+                            <div class="title">Feedback</div>
+                            <div class="content">How would you rate your website experience?</div>
+                            <div class="rate-box">
+                                <input type="radio" name="star" id="star0" />
+                                <label class="star" for="star0"></label>
+                                <input type="radio" name="star" id="star1" />
+                                <label class="star" for="star1"></label>
+                                <input type="radio" name="star" id="star2" checked="checked" />
+                                <label class="star" for="star2"></label>
+                                <input type="radio" name="star" id="star3" />
+                                <label class="star" for="star3"></label>
+                                <input type="radio" name="star" id="star4" />
+                                <label class="star" for="star4"></label>
+                            </div>
+                            <textarea cols="30" rows="6"
+                                placeholder="Please share in details what we can improve you website experience"></textarea>
+                            <br>
+                            <form id="feedbackForm">
+                                <button type="submit" class="submit-btn">Submit</button>
+                            </form>
+
+                            <script>
+                                document.getElementById("feedbackForm").addEventListener("submit", function (event) {
+                                    event.preventDefault(); // Prevent form submission
+
+                                    // Show alert
+                                    alert("Thannks for your feedback!");
+                                });
+                            </script>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ Section -->
+                <div class="col-sm-6" style="margin-top: 30px; height: 500px; width: 550px;">
+                    <button class="accordion" style="display: flex; justify-content: space-between;">What are the Seven New
+                         Wonders of the World?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="panel">
+                        <p1>Great Wall of China, Petra, Christ the Redeemer, Machu Picchu, 
+                            Chichen Itza, Roman Colosseum, Taj Mahal.</p1>
+                    </div>
+                    <button class="accordion" style="display: flex;justify-content: space-between;">Which wonder is located in India?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="panel">
+                        <p1>Taj Mahal.</p1>
+                    </div>
+                    <button class="accordion" style="display: flex;justify-content: space-between;">Where is Machu Picchu situated?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="panel">
+                        <p1>Peru.</p1>
+                    </div>
+                    <button class="accordion" style="display: flex;justify-content: space-between;">Which wonder is a massive stone amphitheater?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="panel">
+                        <p1>Roman Colosseum.</p1>
+                    </div>
+                    <button class="accordion" style="display: flex;justify-content: space-between;">What is the significance of Petra?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="panel">
+                        <p1> An ancient city carved into rock in Jordan</p1>
+                    </div>
+                    <button class="accordion" style="display: flex;justify-content: space-between;">Which wonder is a giant statue of Jesus?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="panel">
+                        <p1>Christ the Redeemer.</p1>
+                    </div>
+                    <button class="accordion" style="display: flex;justify-content: space-between;">How long is the Great Wall of China?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="panel">
+                        <p1>About 21,196 km.</p1>
+                    </div>
+                    <button class="accordion" style="display: flex;justify-content: space-between;">Which wonder was built by the Mayans?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="panel">
+                        <p1>Chichen Itza.</p1>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+</div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+    <!-- ======= FOOTER SECTION ======= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- About Section -->
+                <div class="footer-col">
+                    <h4>About Seven Wonders</h4>
+                    <p>Explore the seven wonders of the world and witness their breathtaking beauty, rich history, and
+                        cultural significance.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Seven Wonders</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-envelope"></i> info@sevenwonders.com</li>
+                        <li><i class="fa-solid fa-phone"></i> +123 456 789</li>
+                        <li><i class="fa-solid fa-map-marker-alt"></i> Worldwide Locations</li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 Seven Wonders. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+
+
+    <!-- NAV JS LINK -->
+    <script src="js/nav.js"></script>
+
+
+</body>
+
+</html>

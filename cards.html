@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seven Wonders Cards</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        /* Card styles */
+        .card {
+            position: relative;
+            width: 100%;
+            max-width: 250px;
+            height: 400px;
+            background: #191919;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            width: 100%;
+            height: 100%;
+            background: #ffce00;
+            transform: skewY(345deg);
+            transition: 0.5s;
+        }
+
+        .card:hover::before {
+            top: -70%;
+            transform: skewY(390deg);
+        }
+
+        /* Image Box */
+        .card .imgBox {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 10px;
+            z-index: 1;
+        }
+
+        .card .imgBox img {
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        /* Content Box */
+        .card .contentBox {
+            position: relative;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 2;
+        }
+
+        .card .contentBox h3 {
+            font-size: 16px;
+            color: white;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .card .contentBox .buy {
+            padding: 8px 20px;
+            color: #000000;
+            text-decoration: none;
+            background: #ffce00;
+            border-radius: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.5s;
+            opacity: 0;
+            top: 100px;
+            position: relative;
+        }
+
+        .card:hover .contentBox .buy {
+            opacity: 1;
+            top: 0;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .card-container {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            
+            .card {
+                max-width: 200px;
+                height: 350px;
+            }
+            
+            .card .contentBox h3 {
+                font-size: 14px;
+            }
+
+            .card .contentBox .buy {
+                padding: 6px 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .card .contentBox h3 {
+                font-size: 14px;
+            }
+
+            .card .contentBox .buy {
+                padding: 6px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Seven Wonders of the World</h2>
+    <div class="card-container" id="card-container">
+        <!-- Cards will be dynamically added here -->
+    </div>
+</div>
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="cardModal" tabindex="-1" aria-labelledby="cardModalLabel" aria-hidden="true">
+  <div  class="modal-dialog">
+    <div style="background-color: rgb(255, 230, 0);color: #000000;" class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cardTitle">Wonder Title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p id="cardDescription"></p>
+        <button>download pdf</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS & Dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="cards json.json"></script>
+<script>
+    
+  // Seven Wonders Data
+  // Function to generate cards dynamically
+  function generateCards() {
+      const container = document.getElementById("card-container");
+      wonders.forEach((item, index) => {
+          const card = document.createElement("div");
+          card.classList.add("card");
+          card.innerHTML = `
+              <div class="imgBox">
+                  <img src="${item.image}" alt="${item.title}">
+              </div>
+              <div class="contentBox">
+                  <h3>${item.title}</h3>
+                  <a href="#" class="buy" onclick="openModal(${index})">View Details</a>
+              </div>
+          `;
+          container.appendChild(card);
+      });
+  }
+
+  // Function to open modal with selected wonder details
+  function openModal(index) {
+      document.getElementById("cardTitle").innerText = wonders[index].title;
+      document.getElementById("cardDescription").innerText = wonders[index].description;
+      new bootstrap.Modal(document.getElementById("cardModal")).show();
+  }
+
+  // Generate cards on page load
+  document.addEventListener("DOMContentLoaded", generateCards);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+const wonders = [
+    {
+        "id": 1,
+        "title": "Pyramid of Giza",
+        "description": "The oldest and largest pyramid in Egypt.",
+        "image": "images/petra2.png"
+    },
+    {
+        "id": 2,
+        "title": "Petra",
+        "description": "An ancient wonder said to be built in Mesopotamia.",
+        "image": "images/pyramid.png"
+    },
+    {
+        "id": 3,
+         "title": "Christ the Redeemer ",
+        "description": "A large temple dedicated to Artemis in ancient Greece.",
+        "image": "images/redeemer.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Chichen Itza",
+        "description": "A giant seated statue of Zeus in Greece.",
+        "image": "images/Chichen_Itza_3.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Machu Picchu",
+        "description": "A grand tomb built for Mausolus, a Persian satrap.",
+        "image": "images/manchu.jpg"
+    },
+    {
+
+        "id": 6,
+        "title": "Great Wall of China",
+        "description": "A massive statue of the sun god Helios in Rhodes.",
+        "image": "images/wall..jpg"
+    },
+    {
+
+        "id": 7,
+        "title": "Taj Mahal",
+        "description": "A towering lighthouse built on the island of Pharos.",
+        "image": "images/Agra-Sehenswürdigkeiten-Tipps.webp"
+    }
+];
+    const wondersDetail = [
+    {
+        "id": 1,
+        "title": "Pyramid of Giza",
+       "detail": "Spanning over 13,000 miles, the Great Wall of China is one of the most extraordinary architectural feats in human history.\n\nOriginally built as a defense mechanism against invasions, this grand structure is a symbol of perseverance and strength. Each stone tells a tale of emperors, soldiers, and civilizations that shaped the destiny of a nation.\n\nThe Great Wall isn't a single continuous wall but rather a series of walls and fortifications constructed across various dynasties, each adding its own architectural advancements and strategic designs. Today, it stands as a UNESCO World Heritage Site, drawing millions of visitors from around the world who come to witness its grandeur.",
+        "image": "images/petra2.png",
+        "second_title":"About the Pyramid of Giza",
+        "history_title":"History of the  Pyramid of Giza",
+        "history_detail": "The origins of the date back to the 7th century BC, when various states in built walls for protection.\n\nHowever, it was the first Emperor of China, Qin Shi Huang, who unified these walls around 221 BC. Under the Ming Dynasty (1368-1644), the Wall was reinforced and expanded with brick and stone, giving it the form we recognize today.\n\nOver the centuries, the Wall served not only as a military defense but also as a powerful trade route, regulating the Silk Road and facilitating cultural exchanges. Despite its strength, history saw invaders such as the Mongols breach the Wall, proving that no structure is truly impenetrable.",
+        "download" :"pdf/giza.pdf.docx"
+
+    },
+    {
+        "id": 2,
+        "title": "Petra",
+        "detail": "Spanning over 13,000 miles, the Great Wall of China is one of the most extraordinary architectural feats in human history.\n\nOriginally built as a defense mechanism against invasions, this grand structure is a symbol of perseverance and strength. Each stone tells a tale of emperors, soldiers, and civilizations that shaped the destiny of a nation.\n\nThe Great Wall isn't a single continuous wall but rather a series of walls and fortifications constructed across various dynasties, each adding its own architectural advancements and strategic designs. Today, it stands as a UNESCO World Heritage Site, drawing millions of visitors from around the world who come to witness its grandeur.",
+        "image": "images/pyramid.png",
+        "second_title":"About the Petra",
+        "history_title":"History of the Petra",
+        "history_detail": "The origins of the date back to the 7th century BC, when various states in China built walls for protection.\n\nHowever, it was the first Emperor of China, Qin Shi Huang, who unified these walls around 221 BC. Under the Ming Dynasty (1368-1644), the Wall was reinforced and expanded with brick and stone, giving it the form we recognize today.\n\nOver the centuries, the Wall served not only as a military defense but also as a powerful trade route, regulating the Silk Road and facilitating cultural exchanges. Despite its strength, history saw invaders such as the Mongols breach the Wall, proving that no structure is truly impenetrable.",
+        "download" :"pdf/PYRAMID.pdf.docx"
+
+    },
+    {
+        "id": 3 ,"title": "Christ the Redeemer ",
+        "detail": "Spanning over 13,000 miles, is one of the most extraordinary architectural feats in human history.\n\nOriginally built as a defense mechanism against invasions, this grand structure is a symbol of perseverance and strength. Each stone tells a tale of emperors, soldiers, and civilizations that shaped the destiny of a nation.\n\nThe Great Wall isn't a single continuous wall but rather a series of walls and fortifications constructed across various dynasties, each adding its own architectural advancements and strategic designs. Today, it stands as a UNESCO World Heritage Site, drawing millions of visitors from around the world who come to witness its grandeur.",
+        "image": "images/redeemer.jpg",
+        "second_title":"About the Christ the Redeemer ",
+        "history_title":"History of the Christ the Redeemer ",
+        "history_detail": "The origins of the date back to the 7th century BC, when various states in built walls for protection.\n\nHowever, it was the first Emperor of China, Qin Shi Huang, who unified these walls around 221 BC. Under the Ming Dynasty (1368-1644), the Wall was reinforced and expanded with brick and stone, giving it the form we recognize today.\n\nOver the centuries, the Wall served not only as a military defense but also as a powerful trade route, regulating the Silk Road and facilitating cultural exchanges. Despite its strength, history saw invaders such as the Mongols breach the Wall, proving that no structure is truly impenetrable.",
+        "download" :"pdf/remendeer.pdf.docx"
+
+    },
+    {
+        "id": 4,
+        "title": "Chichen Itza",
+        "detail": "Spanning over 13,000 miles, is one of the most extraordinary architectural feats in human history.\n\nOriginally built as a defense mechanism against invasions, this grand structure is a symbol of perseverance and strength. Each stone tells a tale of emperors, soldiers, and civilizations that shaped the destiny of a nation.\n\nThe Great Wall isn't a single continuous wall but rather a series of walls and fortifications constructed across various dynasties, each adding its own architectural advancements and strategic designs. Today, it stands as a UNESCO World Heritage Site, drawing millions of visitors from around the world who come to witness its grandeur.",
+        "image": "images/Chichen_Itza_3.jpg",
+        "second_title":"About the Chichen Itza",
+        "history_title":"History of the Chichen Itza",
+        "history_detail": "The origins of the date back to the 7th century BC, when various states in China built walls for protection.\n\nHowever, it was the first Emperor of China, Qin Shi Huang, who unified these walls around 221 BC. Under the Ming Dynasty (1368-1644), the Wall was reinforced and expanded with brick and stone, giving it the form we recognize today.\n\nOver the centuries, the Wall served not only as a military defense but also as a powerful trade route, regulating the Silk Road and facilitating cultural exchanges. Despite its strength, history saw invaders such as the Mongols breach the Wall, proving that no structure is truly impenetrable.",
+        "download" :"pdf/chichen.pdf.docx"
+
+    },
+    {
+        "id": 5,
+        "title": "Machu Picchu",
+        "detail": "Spanning over miles, Machu Picchu is one of the most extraordinary architectural feats in human history.\n\nOriginally built as a defense mechanism against invasions, this grand structure is a symbol of perseverance and strength. Each stone tells a tale of emperors, soldiers, and civilizations that shaped the destiny of a nation.\n\nMachu Picchu isn't a single continuous wall but rather a series of walls and fortifications constructed across various dynasties, each adding its own architectural advancements and strategic designs. Today, it stands as a UNESCO World Heritage Site, drawing millions of visitors from around the world who come to witness its grandeur.",
+        "image": "images/manchu.jpg",
+        "second_title":"About the Machu Picchu",
+        "history_title":"History of the Machu Picchu",
+        "history_detail": "The origins of the Machu Picchu date back to the 7th century BC, when various states in China built walls for protection.\n\nHowever, it was the first Emperor of China, Qin Shi Huang, who unified these walls around 221 BC. Under the Ming Dynasty (1368-1644), the Wall was reinforced and expanded with brick and stone, giving it the form we recognize today.\n\nOver the centuries, the Wall served not only as a military defense but also as a powerful trade route, regulating the Silk Road and facilitating cultural exchanges. Despite its strength, history saw invaders such as the Mongols breach the Wall, proving that no structure is truly impenetrable.",
+        "download" :"pdf/manchupichu.pdf.docx"
+
+    },
+    {
+        "id": 6,
+        "title": "Great Wall of China",
+        "detail": "Spanning over 13,000 miles, the Great Wall of China is one of the most extraordinary architectural feats in human history.\n\nOriginally built as a defense mechanism against invasions, this grand structure is a symbol of perseverance and strength. Each stone tells a tale of emperors, soldiers, and civilizations that shaped the destiny of a nation.\n\nThe Great Wall isn't a single continuous wall but rather a series of walls and fortifications constructed across various dynasties, each adding its own architectural advancements and strategic designs. Today, it stands as a UNESCO World Heritage Site, drawing millions of visitors from around the world who come to witness its grandeur.",
+        "image": "images/wall..jpg",
+        "second_title":"About the Great Wall",
+        "history_title":"History of the Great Wall",
+        "history_detail": "The origins of the Great Wall date back to the 7th century BC, when various states in China built walls for protection.\n\nHowever, it was the first Emperor of China, Qin Shi Huang, who unified these walls around 221 BC. Under the Ming Dynasty (1368-1644), the Wall was reinforced and expanded with brick and stone, giving it the form we recognize today.\n\nOver the centuries, the Wall served not only as a military defense but also as a powerful trade route, regulating the Silk Road and facilitating cultural exchanges. Despite its strength, history saw invaders such as the Mongols breach the Wall, proving that no structure is truly impenetrable.",
+        "download" :"pdf/WALLOFCHINA.pdf.docx"
+    },
+    {
+        "id": 7,
+        "title": "Taj Mahal",
+        "detail": "Spanning over 15,000 miles, Taj Mahal is one of the most extraordinary architectural feats in human history.\n\nOriginally built as a defense mechanism against invasions, this grand structure is a symbol of perseverance and strength. Each stone tells a tale of emperors, soldiers, and civilizations that shaped the destiny of a nation.\n\nTaj Mahal isn't a single continuous wall but rather a series of walls and fortifications constructed across various dynasties, each adding its own architectural advancements and strategic designs. Today, it stands as a UNESCO World Heritage Site, drawing millions of visitors from around the world who come to witness its grandeur.",
+        "image": "images/Agra-Sehenswürdigkeiten-Tipps.webp",
+        "second_title":"About the Taj Mahal",
+        "history_title":"History of the Taj Mahal",
+        "history_detail": "The origins of the Taj Mahal date back to the 7th century BC, when various states in China built walls for protection.\n\nHowever, it was the first Emperor of China, Qin Shi Huang, who unified these walls around 221 BC. Under the Ming Dynasty (1368-1644), the Wall was reinforced and expanded with brick and stone, giving it the form we recognize today.\n\nOver the centuries, the Wall served not only as a military defense but also as a powerful trade route, regulating the Silk Road and facilitating cultural exchanges. Despite its strength, history saw invaders such as the Mongols breach the Wall, proving that no structure is truly impenetrable.",
+        "download" :"pdf/taj.pdf.docx"
+
+    }
+]

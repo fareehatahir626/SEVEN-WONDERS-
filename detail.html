@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Wall of China</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="bootstrap css/bootstrap.min.css">
+    <script src="script.js"></script>
+</head>
+<style>
+    /* General Styling */
+    body {
+        margin: 0;
+        font-family: 'Playfair Display', serif;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    /* Wonder Image Section */
+    .wonder-image {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .wonder-image img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        filter: brightness(0.7);
+    }
+
+    .wonder-image h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3.5em;
+        font-family: 'Orbitron', sans-serif;
+        color: white;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .btn-explore {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 25px;
+        color: #1a4b7c;
+        font-weight: 700;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: 0.3s ease-in-out;
+    }
+
+    .btn-explore:hover {
+        color: white;
+        color: black;
+    }
+
+    /* About Section */
+    .wonder-about {
+        text-align: center;
+        padding: 80px 15%;
+        font-family: 'Playfair Display', serif;
+        background: #f5f5f5;
+        color: black;
+    }
+
+    .wonder-about h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    .wonder-about p {
+        font-size: 1.2em;
+        line-height: 1.8;
+
+    }
+
+    /* History Section */
+    .wonder-history {
+        text-align: center;
+        padding: 80px 15%;
+        background-color: #fff;
+    }
+
+    .wonder-history h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    .wonder-history p {
+        font-size: 1.2em;
+        line-height: 1.8;
+    }
+
+    /* Smooth Scroll */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* Footer Styles */
+    .footer {
+        background: #0a1931;
+        /* Darkest Blue */
+        color: white;
+        padding: 50px 0;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .footer .container {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .footer-col {
+        width: 25%;
+        padding: 0 20px;
+    }
+
+    .footer-col h4 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #00ffff;
+        /* Cyan Color */
+        text-transform: uppercase;
+    }
+
+    .footer-col p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .footer-col ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-col ul li {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .footer-col ul li a {
+        text-decoration: none;
+        color: white;
+        transition: 0.3s;
+    }
+
+    .footer-col ul li a:hover {
+        color: #00ffff;
+        /* Cyan Accent */
+    }
+
+    /* Social Media Links */
+    .footer-col .social-links a {
+        display: inline-block;
+        color: white;
+        font-size: 18px;
+        margin-right: 10px;
+        background: #162447;
+        /* Dark Blue */
+        padding: 8px;
+        border-radius: 50%;
+        transition: 0.3s;
+    }
+
+    .footer-col .social-links a:hover {
+        background: #00ffff;
+        color: #000;
+        transform: scale(1.1);
+    }
+
+    /* Footer Bottom */
+    .footer-bottom {
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #162447;
+        font-size: 14px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .footer .container {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .footer-col {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+</style>
+
+<body>
+
+    <header>
+        <img src="images/logo.png" alt="Logo" class="logo">
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="feedback.html">Feedback</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sitemap.html">Sitemap</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Fullscreen Image Section -->
+    <section class="wonder-image">
+        <div class="overlay"></div>
+        <!-- <h1 id="title"></h1> -->
+        <img src="" id="image" alt="Great Wall of China">
+    </section>
+
+    <!-- About Section -->
+    <section class="wonder-about">
+        <h2 id="second-title"></h2>
+        <p id="detail">
+        </p>
+    </section>
+
+    <!-- History Section -->
+    <section class="wonder-history">
+        <h2 id="history-title"></h2>
+        <p id="history-detail">
+
+        </p>
+        <a href="pdf" id="myLink"><button class="btn-explore">DOWNLOAD</button></a>
+
+
+    </section>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="wonder-json.json"></script>
+<script>
+
+    // Seven Wonders Data
+    // Function to generate cards dynamically
+    function generateCards() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const wonderId = urlParams.get("id");
+
+        const container = document.getElementById("card-container");
+        //   console.log(wndre);
+
+        // wonderDetails.forEach((item, index) => {
+        const wonder = wondersDetail.find(w => w.id == wonderId);
+        if (wonder) {
+            console.log(wonder.history_detail)
+            $('#title').text(wonder.title);
+            // document.getElementById("title").innerText = wonder.title;
+            document.getElementById("image").src = wonder.image;
+            document.getElementById("detail").textContent = wonder.description;
+            document.getElementById("second-title").textContent = wonder.second_title;
+            document.getElementById("detail").textContent = wonder.detail;
+            document.getElementById("history-title").textContent = wonder.history_title;
+            document.getElementById("history-detail").textContent = wonder.history_detail;
+            document.getElementById("history-detail").textContent = wonder.history_detail;
+            document.getElementById("myLink").href = wonder.download;
+
+        } else {
+            document.body.innerHTML = "<h2>Wonder not found</h2>";
+        }
+
+
+        // });
+    }
+
+    // Function to open modal with selected wonder details
+    function openModal(index) {
+        document.getElementById("cardTitle").innerText = wonders[index].title;
+        document.getElementById("cardDescription").innerText = wonders[index].description;
+        new bootstrap.Modal(document.getElementById("cardModal")).show();
+    }
+
+    // Generate cards on page load
+    document.addEventListener("DOMContentLoaded", generateCards);
+</script>
+
+<!-- // Get the product ID from the URL -->
+<!-- 
+const urlParams = new URLSearchParams(window.location.search);
+const productId = urlParams.get("id");
+
+// Fetch JSON and display product details
+fetch("products.json")
+  .then(response => response.json())
+  .then(products => {
+    const product = products.find(p => p.id == productId);
+    if (product) {
+      document.getElementById("product-name").textContent = product.name;
+      document.getElementById("product-image").src = product.image;
+      document.getElementById("product-description").textContent = product.description;
+      document.getElementById("product-price").textContent = product.price;
+    } else {
+      document.body.innerHTML = "<h2>Product not found</h2>";
+    }
+  })
+  .catch(error => console.error("Error loading product data:", error)); -->
+
+<!-- ======= FOOTER SECTION ======= -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <!-- About Section -->
+            <div class="footer-col">
+                <h4>About Seven Wonders</h4>
+                <p>Explore the seven wonders of the world and witness their breathtaking beauty, rich history, and
+                    cultural significance.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Seven Wonders</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fa-solid fa-envelope"></i> info@sevenwonders.com</li>
+                    <li><i class="fa-solid fa-phone"></i> +123 456 789</li>
+                    <li><i class="fa-solid fa-map-marker-alt"></i> Worldwide Locations</li>
+                </ul>
+            </div>
+
+            <!-- Social Media -->
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Seven Wonders. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Font Awesome for Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- Nav js link -->
+<script src="js/nav.js"></script>
+<!-- bootstrap js link -->
+<script src="bootstrap js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
